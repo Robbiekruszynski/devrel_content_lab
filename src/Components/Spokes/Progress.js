@@ -2,17 +2,34 @@ import React from 'react';
 import './Progress.css';
 
 
-const Progression =(props) => {
-    let progression = Object.keys(props.slices).map((spokeKey, i) => (
-        <li key={spokeKey}>
-            <p>{props.slices[spokeKey].spoke}</p>
+const Progression = (props) => {
+    let questions = Object.keys(props.slices).map((questionKey, i) => (
+        <li key={i}>
+            <p>{props.slices[questionKey].question}</p>
+            <div className="Answer">
+                <input
+                onChange={props.selectScore(questionKey)} 
+                type="range" 
+                min="1" 
+                max="5" 
+                value={props.slices[questionKey].transform === '1' ? '5' : props.slices[questionKey].transform.replace('0.','')} 
+                className="rangeInput"
+                style={{background: props.slices[questionKey].fill}} />
+                <span className="Score" style={{backgroundColor: props.slices[questionKey].fill}}>
+                    <div className="leftArrow" style={{borderRight: '5px solid ' + props.slices[questionKey].fill}}></div>
+                    {props.slices[questionKey].transform === '1' ? '5' : props.slices[questionKey].transform.replace('0.','')}
+                </span>
+            </div>
         </li>
     ));
-    return(
-        <div>
-            {progression}
-        </div>
+    return (
+        <>
+            {questions}
+        </>
     );
 }
+
+
+
 
 export default Progression;
