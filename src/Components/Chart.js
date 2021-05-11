@@ -81,6 +81,16 @@ export default class Chart extends Component {
                             <Slices
                                 slices={this.state.slices}
                             />
+                            <use xlinkHref="#overlay" transform="rotate(19, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(63.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(108.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(153.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(198.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(243.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(288.7143, 220, 220)"></use>
+                            <use xlinkHref="#overlay" transform="rotate(333.7143, 220, 220)"></use>
+
+
                     </svg>
                 </div>
              </div>
