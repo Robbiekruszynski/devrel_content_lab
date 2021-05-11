@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Chart.css';
 import Slices from './Slices/Slices';
-
+import Progress from './Spokes/Progress';
 export default class Chart extends Component {
     state = {
         slices: {
@@ -60,7 +60,8 @@ export default class Chart extends Component {
             <div className="Content">
                 <div className="SpokeBlock">
                     <ul>
-                        <li>Content</li>
+                        <Progress
+                        slices={this.state.slices}/>
                     </ul>
               </div>
               <div className="ChartBlock">
