@@ -2,17 +2,17 @@ import React from 'react';
 import './Progress.css';
 
 
-const Progress =(props) => {
-    let progress = Object.keys(props.slices).map((progressKey, i) => (
-        <li key={progressKey}>
-            <p>{props.slices[progressKey].progress}</p>
+const Progression =(props) => {
+    let progression = Object.keys(props.slices).map((spokeKey, i) => (
+        <li key={spokeKey}>
+            <p>{props.slices[spokeKey].spoke}</p>
         </li>
     ));
     return(
         <div>
-            {progress}
+            {progression}
         </div>
     );
 }
 
-export default Progress;
+export default Progression;

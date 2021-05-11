@@ -1,54 +1,54 @@
 import React, { Component } from 'react';
 import './Chart.css';
 import Slices from './Slices/Slices';
-import Progress from './Spokes/Progress';
+import Progression from './Spokes/Progress';
 export default class Chart extends Component {
     state = {
         slices: {
             1: {
-                question: 'Truffle',
+                spoke: 'Truffle',
                 rotate: 'rotate(0.0000, 220, 220)',
                 fill: '#FF5C00',
                 transform: '0.1'
             },
             2: {
-                question: 'Infura',
+                spoke: 'Infura',
                 rotate: 'rotate(45.0000, 220, 220)',
                 fill: '#9245FF',
                 transform: '0.1'
             },
             3: {
-                question: 'Diligence',
+                spoke: 'Diligence',
                 rotate: 'rotate(90.0000, 220, 220)',
                 fill: '#FF234B',
                 transform: '0.1'
             },
             4: {
-                question: 'ConsenSys Quorum',
+                spoke: 'ConsenSys Quorum',
                 rotate: 'rotate(135.0000, 220, 220)',
                 fill: '#357AFF',
                 transform: '0.1'
             },
             5: {
-                question: 'ConsenSys Academy',
+                spoke: 'ConsenSys Academy',
                 rotate: 'rotate(180.0000, 220, 220)',
                 fill: '#E5AC00',
                 transform: '0.1'
             },
             6: {
-                question: 'MetaMask',
+                spoke: 'MetaMask',
                 rotate: 'rotate(225.0000, 220, 220)',
                 fill: '#00AB3A',
                 transform: '0.1'
             },
             7: {
-                question: 'AMB',
+                spoke: 'AMB',
                 rotate: 'rotate(270.0000, 220, 220)',
                 fill: '#00A9B5',
                 transform: '0.1'
             },
             8: {
-                question: 'BUIDL',
+                spoke: 'BUIDL',
                 rotate: 'rotate(315.0000, 220, 220)',
                 fill: '#E5AC00',
                 transform: '0.1'
@@ -60,7 +60,7 @@ export default class Chart extends Component {
             <div className="Content">
                 <div className="SpokeBlock">
                     <ul>
-                        <Progress
+                        <Progression
                         slices={this.state.slices}/>
                     </ul>
               </div>
